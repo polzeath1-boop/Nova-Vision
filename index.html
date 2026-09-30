@@ -1,97 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Nova Vision</title>
 
 <style>
-* {
-    box-sizing: border-box;
+*{box-sizing:border-box}
+
+body{
+margin:0;
+height:100vh;
+overflow:hidden;
+font-family:Arial,sans-serif;
+color:white;
+background:radial-gradient(circle,#354653,#151c23 50%,#06080b);
+display:flex;
+justify-content:center;
+align-items:center;
 }
 
-html, body {
-    margin: 0;
-    width: 100%;
-    min-height: 100%;
+h1{
+position:absolute;
+top:20px;
+font-size:20px;
+letter-spacing:5px;
 }
 
-body {
-    min-height: 100vh;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-    color: white;
-
-    background:
-        radial-gradient(
-            circle at 50% 38%,
-            #354653 0%,
-            #172129 42%,
-            #070a0e 100%
-        );
+.sub{
+position:absolute;
+top:55px;
+font-size:11px;
+opacity:.5;
+letter-spacing:2px;
 }
 
-.container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+.nova{
+width:300px;
+height:300px;
+border-radius:50%;
+position:relative;
+background:#c99782;
+box-shadow:0 20px 80px #000,0 0 80px #9bd8ff33;
 }
 
-/* TITLE */
-
-.title {
-    position: absolute;
-    top: 25px;
-    font-size: 19px;
-    letter-spacing: 5px;
-    font-weight: bold;
+.hair{
+position:absolute;
+width:80%;
+height:60%;
+left:10%;
+top:3%;
+border-radius:50%;
+background:linear-gradient(140deg,#302321,#704a3e,#191516);
 }
 
-.subtitle {
-    position: absolute;
-    top: 55px;
-    font-size: 11px;
-    letter-spacing: 2px;
-    opacity: .55;
+.face{
+position:absolute;
+width:52%;
+height:68%;
+left:24%;
+top:20%;
+border-radius:48%;
+background:linear-gradient(100deg,#c68f79,#e1b39e,#c58d78);
 }
 
-/* NOVA */
-
-.nova {
-    width: min(78vw, 390px);
-    height: min(78vw, 390px);
-    position: relative;
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            ellipse at 50% 58%,
-            #e1bba8 0%,
-            #c99581 45%,
-            #754b41 46%,
-            #43312d 64%,
-            #171b20 65%
-        );
-
-    box-shadow:
-        0 25px 90px rgba(0,0,0,.75),
-        0 0 80px rgba(160,205,240,.15);
-
-    overflow: hidden;
-
-    transform: translateY(0);
-    transition: .4s;
+.eye{
+position:absolute;
+top:38%;
+width:22%;
+height:8%;
+background:white;
+border-radius:50%;
 }
 
-.nova.active {
-    animation: breathe 4s ease-in-out infinite;
-    box-shadow:
-        0 25px 90px rgba(0,0,0,.75),
-        0 0 100px rgba(150,210,255,.30);
+.eye.left{left:18%}
+.eye.right{right:18%}
+
+.pupil{
+width:45%;
+height:90%;
+margin:auto;
+background:#51443e;
+border-radius:50%;
 }
 
-@key
+.brow{
+position:absolute;
+top:30%;
+width:23%;
+height:3%;
+background:#51352f;
+border-radius:50%;
+}
+
+.brow.left{left:17%}
+.brow.right{right:17%}
+
+.nose{
+position:absolute;
+left:47%;
+top:43%;
+width:8%;
+height:20%;
+border-right:2px solid #754b4155;
+border-bottom:2px solid #754b4144;
+border-radius:0 0 60% 0;
+}
+
+.mouth{
+position:absolute;
+left:32%;
+top:70%;
+width:36%;
+height:12%;
+border-bottom:4px solid #713e3b;
+border-radius:50%;
+}
+
+button{
+margin-top:340px;
+padding:14px 22px;
+border:1px solid #ffffff33;
+border-radius:30px;
+background:#ffffff12;
+color:white;
+font-size:15px;
+}
+
+button:active{
+background:#ffffff30;
+}
+
+#message{
+position:absolute;
+bottom:35px;
+font-size:14px;
